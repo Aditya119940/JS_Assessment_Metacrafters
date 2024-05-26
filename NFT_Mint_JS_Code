@@ -1,0 +1,36 @@
+const NFT_list=[]
+
+function mintNFT(brand,model,top_speed,acceleration,handling ){
+  const NFT={
+    "BRAND" : brand,
+    "MODEL" : model,
+    "TOP_SPEED" : top_speed,
+    "ACCELERATION" : acceleration,
+    "HANDLING" : handling
+  }
+
+  NFT_list.push(NFT);
+  console.log("Minted : "+ brand + " " + model);
+}
+
+function listNFTs(){
+  for(let i=0; i<NFT_list.length; i++){
+    console.log("\nBRAND : " + NFT_list[i].BRAND);
+    console.log("MODEL : "+ NFT_list[i].MODEL);
+    console.log("TOP SPEED : "+ NFT_list[i].TOP_SPEED); 
+    console.log("ACCELERATION : "+ NFT_list[i].ACCELERATION);
+    console.log("HANDLING : "+ NFT_list[i].HANDLING); 
+  }
+}
+
+function getTotalSupply(){
+  console.log("\nTotal NFTs : "+NFT_list.length); 
+}
+
+mintNFT("Ferrari","488 GTB",347.6,80.24,43.48);
+mintNFT("Lamborghini","Centenario",363.9,90.48,47.46);
+mintNFT("DS Automobiles","DS E-Tense",270.1,76.07,81.27);
+mintNFT("Lotus","Elsie Sprint 220",270,82.25,83.47);
+mintNFT("Bugatti","Divo",396,85.7,61.48);
+listNFTs();
+getTotalSupply();
