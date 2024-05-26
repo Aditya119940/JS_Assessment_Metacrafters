@@ -1,6 +1,6 @@
 const NFT_list=[]
 
-function mintNFT(brand,model,top_speed,acceleration,handling ){
+function mintNFT(brand,model,top_speed,acceleration,handling){
   const NFT={
     "BRAND" : brand,
     "MODEL" : model,
@@ -23,7 +23,7 @@ function listNFTs(){
   }
 }
 
-function getTotalSupply(){
+function getTotalNFTs(){
   console.log("\nTotal NFTs : "+NFT_list.length); 
 }
 
@@ -33,4 +33,4 @@ mintNFT("DS Automobiles","DS E-Tense",270.1,76.07,81.27);
 mintNFT("Lotus","Elsie Sprint 220",270,82.25,83.47);
 mintNFT("Bugatti","Divo",396,85.7,61.48);
 listNFTs();
-getTotalSupply();
+getTotalNFTs();
